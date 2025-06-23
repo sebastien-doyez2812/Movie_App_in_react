@@ -6,16 +6,20 @@ import MovieCard  from './components/movies_card'
 import Home from './pages/home'
 import {Routes, Route} from "react-router-dom"
 import Favorite from './pages/favorites'
+import NavBar from './components/NavVar'
 
 function App() {
    return ( 
     <>
-    <main className= "main-content">
-      <Routes>
-        <Route path = "/" element = {<Home/>}></Route>
-        <Route path= "/favorites" element= {<Favorite/>}></Route>
-      </Routes>
-    </main>
+    <div>
+      <NavBar/>
+      <main className= "main-content">
+        <Routes>
+          <Route path = "/" element = {<Home/>}></Route>
+          <Route path= "/favorites" element= {<Favorite/>}></Route>
+        </Routes>
+      </main>
+    </div>
     </>
   );   
 }
